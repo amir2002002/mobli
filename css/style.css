@@ -1,12 +1,18 @@
+/*css reset*/
 * {
     box-sizing: border-box;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+
+/*page style*/
 body {
     direction: rtl;
     margin: 0;
     font-family: Tahoma, Arial, sans-serif;
-    background-color: aqua;
 }
 
 header {
@@ -48,26 +54,29 @@ nav ul li a:hover {
 
 .cards {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin: 40px 40px;
     flex-wrap: wrap;
-}
+    margin: .5rem;
 
-.card {
-    flex: 1;
-    min-height: 250px;
-    max-width: 320px;
-    background-color: #F7F3EA;
-    border: 1px solid #D8B56D;
-    padding: 20px;
+}
+.cards .card-wrapper{
     flex-basis: 100%;
 }
 
-.card img {
-    max-width: 100%;
-    height: auto;
+.cards .card-wrapper .card {
+    min-height: 250px;
+    background-color: #F7F3EA;
+    border: 1px solid #674804;
+    padding: 1rem;
+    margin: .5rem;
+    height: calc(100% - 1rem);
+    border-radius: 6px;
 }
+.cards .card-wrapper .card img{
+    height: 70vw;
+    width: 100%;
+    object-fit: cover;
+}
+
 
 
 footer {
@@ -107,22 +116,20 @@ footer {
 }
 
 @media screen and (min-width:576px) {
-    body {
-        background-color: #C3D;
+    .cards .card-wrapper{
+        flex-basis: 50%;
     }
-
-    .card {
-        flex-basis: 45%;
+    .cards .card-wrapper .card img{
+        height: 50vw;
     }
 }
 
-@media screen and (min-width:768px) {
-    body {
-        background-color: rgb(31, 8, 203);
-    }
-
-    .card {
+@media screen and (min-width:900px) {
+    .cards .card-wrapper{
         flex-basis: 25%;
+    }
+    .cards .card-wrapper .card img{
+        height: 25vw;
     }
 
     header {
