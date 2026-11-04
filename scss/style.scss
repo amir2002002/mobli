@@ -1,0 +1,157 @@
+@use 'default-styles/default-styles';
+
+
+header {
+  background-color: #14243A;
+  border-bottom: 3px solid #D8B56D;
+  padding: 22px 35px;
+
+  .site-title {
+    color: #F7F3EA;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  margin-top: 20;
+  padding: 0;
+
+  li a {
+    color: #F7F3EA;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #D8B56D;
+    }
+  }
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5rem;
+
+  .card-wrapper {
+    flex-basis: 100%;
+
+    .card {
+      min-height: 250px;
+      background-color: #F7F3EA;
+      border: 1px solid #674804;
+      padding: 1rem;
+      margin: .5rem;
+      height: calc(100% - 1rem);
+      border-radius: 6px;
+
+      img {
+        height: 70vw;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+footer {
+  background-color: #14243A;
+  border-top: 3px solid #D8B56D;
+  padding: 30px 20px;
+  text-align: center;
+  color: #F7F3EA;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    .social {
+      padding: 10px 22px;
+      border: 1px solid #D8B56D;
+      border-radius: 6px;
+      color: #F7F3EA;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #D8B56D;
+        color: #14243A;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  .copyright {
+    margin: 25px 0 0;
+    color: #C7D0DC;
+    font-size: 13px;
+  }
+
+}
+
+
+@media screen and (min-width: 576px) {
+
+  .cards {
+    .card-wrapper {
+      flex-basis: 50%;
+
+      .card {
+        img {
+          height: 50vw;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+///make sass .....
+
+
+
+
+
+
+@media screen and (min-width: 900px) {
+  .cards .card-wrapper {
+    flex-basis: 25%;
+  }
+  .cards .card-wrapper .card img {
+    height: 25vw;
+  }
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 45px;
+    padding: 22px 35px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
