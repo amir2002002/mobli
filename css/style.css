@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  direction: rtl;
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+header {
+  background-color: #14243A;
+  border-bottom: 3px solid #D8B56D;
+  padding: 22px 35px;
+}
+header .site-title {
+  color: #F7F3EA;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  list-style: none;
+  margin-top: 20;
+  padding: 0;
+}
+nav ul li a {
+  color: #F7F3EA;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #D8B56D;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+}
+.cards .card-wrapper {
+  flex-basis: 100%;
+}
+.cards .card-wrapper .card {
+  min-height: 250px;
+  background-color: #F7F3EA;
+  border: 1px solid #674804;
+  padding: 1rem;
+  margin: 0.5rem;
+  height: calc(100% - 1rem);
+  border-radius: 6px;
+}
+.cards .card-wrapper .card img {
+  height: 70vw;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background-color: #14243A;
+  border-top: 3px solid #D8B56D;
+  padding: 30px 20px;
+  text-align: center;
+  color: #F7F3EA;
+}
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+footer .social-links .social {
+  padding: 10px 22px;
+  border: 1px solid #D8B56D;
+  border-radius: 6px;
+  color: #F7F3EA;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+footer .social-links .social:hover {
+  background-color: #D8B56D;
+  color: #14243A;
+  transform: translateY(-3px);
+}
+footer .copyright {
+  margin: 25px 0 0;
+  color: #C7D0DC;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 576px) {
+  .cards .card-wrapper {
+    flex-basis: 50%;
+  }
+  .cards .card-wrapper .card img {
+    height: 50vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .cards .card-wrapper {
+    flex-basis: 25%;
+  }
+  .cards .card-wrapper .card img {
+    height: 25vw;
+  }
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 45px;
+    padding: 22px 35px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
